@@ -47,3 +47,4 @@ bqplot
 dhllinalg
 pandas
 numpy
+matplotlib
