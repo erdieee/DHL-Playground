@@ -26,9 +26,10 @@ jobs:
       - name: Build the JupyterLite site
         run: |
           cp README.md content
-          jupyter lite build --contents content --output-dir dist --pyodide https://www.asc.tuwien.ac.at/~mhochsteger/ngsolve/ngsolve_pyodide_0.24.1.tar.bz2
-          cd dist/static/pyodide
-          node add_wheels.js ../../../build_helpers/*.whl
+          jupyter lite build --contents content --output-dir dist
+          # jupyter lite build --contents content --output-dir dist --pyodide https://www.asc.tuwien.ac.at/~mhochsteger/ngsolve/ngsolve_pyodide_0.24.1.tar.bz2
+          # cd dist/static/pyodide
+          # node add_wheels.js ../../../build_helpers/*.whl
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
