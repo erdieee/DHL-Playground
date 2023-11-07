@@ -21,6 +21,7 @@ jobs:
       - name: Install the dependencies
         run: |
           python -m pip install --upgrade pip
+          python -m pip install build_helpers/build_helpers/dhllinalg-0.1.1-cp311-cp311-emscripten_3_1_32_wasm32.whl
           python -m pip install -r requirements.txt
       - name: Build the JupyterLite site
         run: |
